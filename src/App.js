@@ -6,6 +6,7 @@ import Register from './pages/register'
 import Offers from './pages/offers'
 import CreatePost from './pages/createpost'
 import ViewPost from './pages/viewpost'
+import ViewReview from './pages/view_review'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Route exact path="/offer" element={<Offers />} />
       <Route exact path="/createpost" element={<CreatePost />} />
       <Route exact path="/viewpost" element={<ViewPost />} />
+      <Route exact path="/view_review" element={<ViewReview />} />
       </Routes>
     </BRouter>
   );
