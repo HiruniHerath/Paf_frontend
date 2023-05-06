@@ -15,7 +15,7 @@ export default function editAccount() {
             <Nav></Nav>
             <Row>
                 <h2 style={{ paddingLeft: "10vh", paddingTop: "2vh" }}>Edit Account </h2>
-                <Col span={14}>
+                <Col span={12}>
 
                     <div style={{ paddingBottom: '4vh', paddingTop: "6vh", paddingLeft: "7vh" }}>
                         <Card border="dark" style={{ width: '45rem' }}>
@@ -73,9 +73,9 @@ export default function editAccount() {
 
 
                                     </div>
-
+                                <br></br>
                                     <div style={{ paddingLeft: "40%" }}>
-                                        <Button type="submit" variant="outline-dark" style={{ width: "120px" }}> Save </Button>{' '} {' '}<Button variant="outline-dark" style={{ width: "120px" }} > Cancel </Button>
+                                        <Button type="submit" variant="outline-dark" style={{ width: "120px" }}> Save </Button>{' '} {' '}{' '}<Button variant="outline-dark" style={{ width: "120px" }} > Cancel </Button>
 
                                         </div>
                                 </Form>
@@ -87,7 +87,10 @@ export default function editAccount() {
 
                 </Col>
 
+<Col>
+<img src='https://www.theforkmanager.com/s3/files/styles/lightbox_content/public/Resize%20Family%202.jpg?itok=MYonQf03' style={{width:"550px" , paddingTop:"60px"}} ></img>
 
+</Col>
                
 
             </Row>

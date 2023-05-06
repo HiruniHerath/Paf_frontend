@@ -9,71 +9,46 @@ import { Container } from 'react-bootstrap';
 export default function Profile() {
     return (
 
-        <><Nav></Nav><section>
-
-
-
-
-            <div style={{ backgroundImage: `url(${"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUbtpVKA4u4U9aFXDqhxWJdFUD9nMG7gjIGQ&usqp=CAU"})`, width: "100%", objectFit: "cover", height: "200px" }}>
-           
+        <><Nav></Nav>
+        <section>
+            <div style={{ backgroundImage: `url(${"https://c8.alamy.com/comp/2J5CAP0/beautiful-hand-drawn-delicious-fast-food-seamless-pattern-tasty-background-great-for-textiles-wrapping-packaging-wallpapers-vector-design-2J5CAP0.jpg"})`, width: "100%", objectFit: "cover", height: "150px" }}>
+    </div>
+    <Row style={{paddingLeft:"40px",paddingRight:"20px" , paddingTop:"20px"}}>
+        <Col><Card style={{width:"500px"}}>
+            <Card.Img variant="top" src="https://images.unsplash.com/photo-1625585675064-7b8cdcd0ca49?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW4lMjByZXN0YXVyYW50fGVufDB8fDB8fA%3D%3D&w=1000&q=80"  style={{height:"350px",objectFit:"cover" }}/>
+            <Card.Body>
+              <Card.Title>User Name</Card.Title>
+              <Card.Text>
+                <p>details.....</p>
+              <Button variant="outline-dark" href="/editprofile">EDIT</Button>{' '}
+              <Button variant="outline-dark">DELETE</Button>
+              </Card.Text>
+            </Card.Body>
+          </Card></Col>
+        <Col xs={7}><h5>View All Uploads</h5> <Row xs={1} md={2} className="g-4">
+      {Array.from({ length: 4 }).map((_, idx) => (
+        <Col key={idx}>
           
+          <Card>
+            <Card.Img variant="top" src="holder.js/100px160" />
+            <Card.Body>
+              <Card.Title> </Card.Title>
+              <Card.Text>
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
+    </Row></Col>
+       
+      </Row>
+       
+   
 
-
- 
-
-
-
-            </div>
-
-            
- 
-    <CardGroup>
-        
-      <Card>
-      <Card style={{ width: "16rem" }}>
-        <Card.Img variant="top" src="https://e9g2x6t2.rocketcdn.me/wp-content/uploads/2021/06/FINAL-Blog-Images-7-1024x683.jpg" />
-        <Card.Body>
-          <Card.Title>Jamie Oliver</Card.Title>
-          <Card.Text>
-          Hi people, I want to share my experiences with food with you! Follow me!
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted"></small>
-        </Card.Footer>
-        </Card>
-      </Card>
-
-      <Card>
-      <Card style={{ width: "16rem" }}>
-        <Card.Img variant="top" src="https://www.devry.edu/content/dam/devry_edu/images/blog/pic-networking-on-linkedin.jpg.dvu.opt-image.500.jpg" />
-        <Card.Body>
-          <Card.Title>Nolan Rossi</Card.Title>
-          <Card.Text>
-          Donut worry, be happy.{' '}
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted"></small>
-        </Card.Footer>
-        </Card>
-      </Card>
-
-      <Card>
-      <Card style={{ width: "16rem" }}>
-        <Card.Img variant="top" src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.jpg?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" />
-        <Card.Body>
-          <Card.Title>Emily Adams</Card.Title>
-          <Card.Text>
-          Hey! Let us talk about food all day!
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted"></small>
-        </Card.Footer>
-      </Card>
-      </Card>
-    </CardGroup>
+   
   
 
 
