@@ -1,10 +1,51 @@
-import React from 'react';
+import React, { useState } from "react"
 import { Card, Col, Row, Form, Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from '../components/nav'
+import axios from "axios";
 
 
-export default function createpost() {
+export default function Createpost() {
+
+  const [caption, setcaption] = useState(" ");
+    const [imageUrls, setimageUrls] = useState(" ");
+    const commentId=0;
+    const createdBy=0;
+     const id=0;
+    const likes=0;
+    const userId='';
+
+
+
+
+
+ function sendData(e) {
+        if (!(caption.trim().length > 2)) {
+            alert("Invalid 'caption' value! Length must be more chracters")
+            return
+        } else if (!(imageUrls.trim().length > 2)) {
+            alert("Invalid 'title' value! Title must be grater than more chracters")
+            return
+        }
+        e.preventDefault();
+
+        const newPost = {
+            caption,
+            imageUrls,
+            commentId,createdBy,id,likes,userId
+        }
+
+        axios.post("http://localhost:8095/post-service/post/create", newPost).then(() => {
+            ("post added")
+            setcaption('');
+            setimageUrls('');
+            window.location = `/viewpost`;
+
+        }).catch((err) => {
+            alert("error");
+        })
+    }
+
     return (
         <div>
             <Nav></Nav>
@@ -15,35 +56,21 @@ export default function createpost() {
                     <div style={{ paddingBottom: '4vh', paddingTop: "6vh", paddingLeft: "7vh" }}>
                         <Card border="dark" style={{ width: '45rem' }}>
                             <Card.Body>
-                                <Form >
+                                <Form onSubmit={sendData}>
                                     <span className="error-message" style={{ color: "blue" }}></span>
                                     <div >
                                         <Row >
                                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                                 <Form.Label >Post Tittle: </Form.Label>
-                                                <Form.Control type="text"
+                                                <Form.Control type="text" onChange={(e) => setcaption(e.target.value)}
                                                     placeholder=" Enter Title .." />
                                             </Form.Group>
                                         </Row>
-                                        <Row>
-                                            <Form.Group className="mb-3" controlId="formBasicEmail">
-                                                <Form.Label >Description : </Form.Label>
-                                                <Form.Control type="text"
 
-                                                    placeholder=" Enter your description .." />
-                                            </Form.Group>
-                                            <Form.Group className="mb-3" controlId="formBasicEmail">
-                                                <Form.Label >Additional  : </Form.Label>
-                                                <Form.Control type="text"
-
-                                                    placeholder=" Enter your description .." />
-                                            </Form.Group>
-                                        </Row>
                                         <Row>
-                                            <Form.Group controlId="fileupload">
+                                            <Form.Group controlId="imgfield">
                                                 <Form.Label>Post image</Form.Label>
-                                                <Form.Control type="file" multiple />
-                                                <h6>**Please do not exceed the amount of file size 25MB </h6>
+                                                <Form.Control onChange={(e) => setimageUrls(e.target.value)} type="text" placeholder=" Enter image URL .." />
                                             </Form.Group>
                                         </Row>
                                     </div>
