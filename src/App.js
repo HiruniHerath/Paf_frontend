@@ -9,6 +9,8 @@ import ViewPost from './pages/viewpost'
 import Createprofile from './pages/createprofile'
 import Editprofile from './pages/editprofile'
 import Profile from './pages/profile'
+import CreateOffer from "./pages/createOffers";
+import editAccount from "./pages/editprofile";
 
 function App() {
   return (
@@ -21,8 +23,9 @@ function App() {
       <Route exact path="/createpost" element={<CreatePost />} />
       <Route exact path="/viewpost" element={<ViewPost />} />
       <Route exact path="/createprofile" element={<Createprofile />} />
-      <Route exact path="/editprofile" element={<Editprofile />} />
+      <Route exact path="/editaccount" element={<editAccount />} />
       <Route exact path="/profile" element={<Profile />} />
+      <Route exact path="/createoffer" element={<CreateOffer/>}/>
       </Routes>
     </BRouter>
   );

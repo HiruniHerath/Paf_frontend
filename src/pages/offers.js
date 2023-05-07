@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button, Nav, Navbar } from 'react-bootstrap';
+import Navh from '../components/nav';
 
 const OffersView = () => {
   const offerData = [
@@ -63,16 +64,8 @@ const OffersView = () => {
 
 
     <Container fluid className="bg-light">
-      <Navbar style={{ backgroundColor: '#008f7e', backgroundImage: 'linear-gradient(to bottom, #008f7e, #006c5d)' }} variant="light">
-        <Container>
-          <Navbar.Brand href="#home">Home</Navbar.Brand>
-          <Nav className="me-left">
-            <Nav.Link href="#home">Reviws</Nav.Link>
-            <Nav.Link href="#features">Offers</Nav.Link>
-            <Nav.Link href="#pricing">Profile</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+      
+      <Navh/>
 
       <br></br>
       <Container fluid className="bg-light">

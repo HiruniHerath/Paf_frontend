@@ -18,7 +18,7 @@ export default function Navh() {
           </span>
           <Nav.Link style={{ color: "#ffffff", paddingRight: "400px", marginTop: "10px" }} href="#home">Home</Nav.Link>
           <Nav className="me-left">
-            <Nav.Link style={{ color: "#ffffff", marginRight: "80px" }} href="#home"> Reviws</Nav.Link>
+            <Nav.Link style={{ color: "#ffffff", marginRight: "80px" }} href="#home"> Reviews</Nav.Link>
             <Nav.Link style={{ color: "#ffffff", marginRight: "80px" }} href="#features">  Offers</Nav.Link>
             <Nav.Link style={{ color: "#ffffff", marginRight: "80px" }} href="#pricing">Uploads</Nav.Link>
             <Nav.Link style={{ color: "#ffffff", marginRight: "80px" }} href="#pricing">Profile</Nav.Link>
